@@ -1,39 +1,17 @@
 import java.util.Scanner;
 
-public class Tester{
-
-public static void main (String [] args){
-
-Scanner sc = new Scanner(System.in);
-
-System.out.println("Enter 3 numbers: ");
-int arr[] = new int[3];
-
-for(int i=0; i<3; i++){
-
-	arr[i] = sc.nextInt();
-
-}
-
-int min = arr[0];
-int max = arr[0];
-
-
-for(int i=0; i<3; i++){
-
-	if(arr[i] < min){
-		min = arr[i];
-	}
-	
-	if(arr[i] > max){
-		max = arr[i];
-	}
-
-}
-
-System.out.println("Maximum: " + max + ", Minimum: " + min);
-System.out.println("Sum of minimum and maximum: " + (min+max));
-
-}
-
+public class Tester {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+       
+        int num1 = 20;
+       	int num2 = 10;
+       	int num3 = 30;
+       
+        int max = Math.max(num1, Math.max(num2, num3));
+        int min = Math.min(num1, Math.min(num2, num3));
+       
+        int sum = min + max;
+        System.out.println("The sum of the smallest and largest numbers is: " + sum);
+    }
 }
